@@ -12,6 +12,35 @@
     overflow: auto;
 }
 
+.controlsWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    background: green;
+    padding: 30px;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    padding: 10px
+}
+
+.control button.off {
+    background: red;
+}
+
+.control button.on {
+    background: blue;
+}
+
+.item {
+    width: 150px;
+    border: 1px solid #d8d8d8;
+}
+
 .flexdirectionrow {
     flex-direction: row;
 }
@@ -106,25 +135,4 @@
 
 .aligncontentspacearound {
     align-content: space-around;
-}
-
-.controlsWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 300px;
-    background: green;
-}
-
-.control {
-    display: flex;
-    flex-direction: column;
-    padding: 10px
-}
-
-.item {
-    width: 150px;
-    border: 1px solid #d8d8d8;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import classNames from 'classnames';
 
 import Layout from "../components/layout"
@@ -6,44 +6,42 @@ import SEO from "../components/seo"
 
 import '../components/index.css'
 import Images from "../components/images"
-import { setFlexDirection } from "../helpers/flexDirection"
-import { setFlexWrap } from "../helpers/flexWrap"
-import { setJustifyContent } from "../helpers/justifyContent"
-import { setAlignItems } from "../helpers/alignItems"
-import { setAlignContent } from "../helpers/alignContent"
+import { classesDefs } from "../helpers/classesNames"
+import { setNewClasses } from "../helpers/setNewClasses"
+import { FlexSetting } from "../components/FlexSetting"
 
 const IndexPage = () => {
 
-  const [classes, setClasses] = useState(['flexboxwrapper', 'flexdirectionrow', 'alignitemsflexstart'])
+  const [classes, setClasses] = useState([
+    'flexboxwrapper',
+    classesDefs.FlexDirection.row,
+    classesDefs.AlignItems.flexStart
+  ])
 
-  const updateFlexDirection = (direction) => {
-    const updatedClasses = setFlexDirection(direction, classes);
+  const updateClasses = (targetClass, classDefinitions) => {
+    const updatedClasses = setNewClasses(targetClass, classes, classDefinitions)
     setClasses(updatedClasses)
   }
 
-  const updateFlexWrap = (wrap) => {
-    const updatedClasses = setFlexWrap(wrap, classes);
-    setClasses(updatedClasses)
+  const updateFlexDirection = (targetClass) => {
+    return updateClasses(targetClass, classesDefs.FlexDirection)
   }
 
-  const updateJustifyContent = (justifyContent) => {
-    const updatedClasses = setJustifyContent(justifyContent, classes);
-    setClasses(updatedClasses)
+  const updateFlexWrap = (targetClass) => {
+    return updateClasses(targetClass, classesDefs.FlexWrap)
   }
 
-  const updateAlignItems = (alignItems) => {
-    const updatedClasses = setAlignItems(alignItems, classes);
-    setClasses(updatedClasses)
+  const updateJustifyContent = (targetClass) => {
+    return updateClasses(targetClass, classesDefs.JustifyContent)
   }
 
-  const updateAlignContent = (alignContent) => {
-    const updatedClasses = setAlignContent(alignContent, classes);
-    setClasses(updatedClasses)
+  const updateAlignItems = (targetClass) => {
+    return updateClasses(targetClass, classesDefs.AlignItems)
   }
 
-  useEffect(() => {
-    console.log(classes)
-  }, [classes]);
+  const updateAlignContent = (targetClass) => {
+    return updateClasses(targetClass, classesDefs.AlignContent)
+  }
 
   return (
   <Layout>
@@ -54,49 +52,49 @@ const IndexPage = () => {
       </div>
       <div className="controlsWrapper">
         <div className="control">
-          <h2>Flex Direction</h2>
-          <button onClick={() => updateFlexDirection('row')}>row</button>
-          <button onClick={() => updateFlexDirection('column')}>column</button>
-          <button onClick={() => updateFlexDirection('row-reverse')}>row-reverse</button>
-          <button onClick={() => updateFlexDirection('column-reverse')}>column-reverse</button>
+          <FlexSetting
+            title={'flex-direction:'}
+            classDefinitions={classesDefs.FlexDirection}
+            callback={updateFlexDirection}
+            currentClasses={classes}
+          />
         </div>
         <div className="control">
-          <h2>Flex Wrap</h2>
-          <button onClick={() => updateFlexWrap('nowrap')}>nowrap</button>
-          <button onClick={() => updateFlexWrap('wrap')}>wrap</button>
-          <button onClick={() => updateFlexWrap('wrap-reverse')}>wrap-reverse</button>
+          <FlexSetting
+            title={'flex-wrap:'}
+            classDefinitions={classesDefs.FlexWrap}
+            callback={updateFlexWrap}
+            currentClasses={classes}
+          />
         </div>
         <div className="control">
-          <h2>Justify Content</h2>
-          <button onClick={() => updateJustifyContent('flex-start')}>flex-start</button>
-          <button onClick={() => updateJustifyContent('flex-end')}>flex-end</button>
-          <button onClick={() => updateJustifyContent('center')}>center</button>
-          <button onClick={() => updateJustifyContent('space-between')}>space-between</button>
-          <button onClick={() => updateJustifyContent('space-around')}>space-around</button>
-          <button onClick={() => updateJustifyContent('space-evenly')}>space-evenly</button>
+          <FlexSetting
+            title={'justify-content:'}
+            classDefinitions={classesDefs.JustifyContent}
+            callback={updateJustifyContent}
+            currentClasses={classes}
+          />
         </div>
         <div className="control">
-          <h2>Align Items</h2>
-          <button onClick={() => updateAlignItems('flex-start')}>flex-start</button>
-          <button onClick={() => updateAlignItems('flex-end')}>flex-end</button>
-          <button onClick={() => updateAlignItems('center')}>center</button>
-          <button onClick={() => updateAlignItems('stretch')}>stretch</button>
-          <button onClick={() => updateAlignItems('baseline')}>baseline</button>
+          <FlexSetting
+            title={'align-items:'}
+            classDefinitions={classesDefs.AlignItems}
+            callback={updateAlignItems}
+            currentClasses={classes}
+          />
         </div>
         <div className="control">
-          <h2>Align Content</h2>
-          <button onClick={() => updateAlignContent('flex-start')}>flex-start</button>
-          <button onClick={() => updateAlignContent('flex-end')}>flex-end</button>
-          <button onClick={() => updateAlignContent('center')}>center</button>
-          <button onClick={() => updateAlignContent('stretch')}>stretch</button>
-          <button onClick={() => updateAlignContent('space-between')}>space-between</button>
-          <button onClick={() => updateAlignContent('space-around')}>space-around</button>
+          <FlexSetting
+            title={'align-content:'}
+            classDefinitions={classesDefs.AlignContent}
+            callback={updateAlignContent}
+            currentClasses={classes}
+          />
         </div>
       </div>
     </div>
   </Layout>
   )
-
 }
 
 export default IndexPage
