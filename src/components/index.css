@@ -1,0 +1,130 @@
+.mainStuffWrapper {
+    background: #efefef;
+    width: 100%;
+    height:100vh;
+    padding: 35px;
+}
+
+.flexboxwrapper {
+    display: flex;
+    background: #4e99c4;
+    height: 40vh;
+    overflow: auto;
+}
+
+.flexdirectionrow {
+    flex-direction: row;
+}
+
+.flexdirectionrreverse {
+    flex-direction: row-reverse;
+}
+
+.flexdirectioncolumn {
+    flex-direction: column;
+}
+
+.flexdirectioncolreverse {
+    flex-direction: column-reverse;
+}
+
+.flexwrapwrap {
+    flex-wrap: wrap;
+}
+
+.flexwrapnowrap {
+    flex-wrap: nowrap;
+}
+
+.flexwrapreverse {
+    flex-wrap: wrap-reverse;
+}
+
+.justifycontentflexstart {
+    justify-content: flex-start;
+}
+
+.justifycontentflexend {
+    justify-content: flex-end;
+}
+
+.justifycontentcenter {
+    justify-content: center;
+}
+
+.justifycontentspacearound {
+    justify-content: space-around;
+}
+
+.justifycontentspacebetween {
+    justify-content: space-between;
+}
+
+.justifycontentspaceevenly {
+    justify-content: space-evenly;
+}
+
+.alignitemsflexstart {
+    align-items: flex-start;
+}
+
+.alignitemsflexend {
+    align-items: flex-end;
+}
+
+.alignitemscenter {
+    align-items: center;
+}
+
+.alignitemsstretch {
+    align-items: stretch;
+}
+
+.alignitemsbaseline {
+    align-items: baseline;
+}
+
+.aligncontentflexstart {
+    align-content: flex-start;
+}
+
+.aligncontentflexend {
+    align-content: flex-end;
+}
+
+.aligncontentcenter {
+    align-content: center;
+}
+
+.aligncontentstretch {
+    align-content: stretch;
+}
+
+.aligncontentspacebetween {
+    align-content: space-between;
+}
+
+.aligncontentspacearound {
+    align-content: space-around;
+}
+
+.controlsWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 300px;
+    background: green;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    padding: 10px
+}
+
+.item {
+    width: 150px;
+    border: 1px solid #d8d8d8;
+}
