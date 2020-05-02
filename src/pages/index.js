@@ -14,8 +14,8 @@ const IndexPage = () => {
 
   const [classes, setClasses] = useState([
     'flexboxwrapper',
-    classesDefs.FlexDirection.row,
-    classesDefs.AlignItems.flexStart
+    classesDefs.FlexDirection.row.name,
+    classesDefs.AlignItems.flexStart.name
   ])
 
   const updateClasses = (targetClass, classDefinitions) => {
