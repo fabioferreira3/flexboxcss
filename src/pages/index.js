@@ -53,7 +53,7 @@ const IndexPage = () => {
       <div className={classNames(classes)}>
         <Images qtyImages={qtyImages}/>
       </div>
-      <div className={'mainControlsWrapper'}>
+      <div className={'containerControlsWrapper'}>
         <div>
           <span>Qty of Images:</span>
           <CounterButtons imagesSet={qtyImages} callback={setQtyImages}/>
@@ -101,7 +101,40 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-
+      <div className="itemsControlWrapper">
+        <div className="control">
+          <h2>Item 1</h2>
+          <span>order:</span>
+          <select name="" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <span>flex-grow:</span>
+          <input type="number"/>
+          <span>flex-shrink:</span>
+          <input type="number"/>
+          <span>align-self</span>
+          <select name="" id="">
+            <option value="auto">auto</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="baseline">baseline</option>
+            <option value="stretch">stretch</option>
+          </select>
+        </div>
+        <div className="control">
+          <h2>Item 2</h2>
+        </div>
+        <div className="control">
+          <h2>Item 3</h2>
+        </div>
+        <div className="control">
+          <h2>Item 4</h2>
+        </div>
+      </div>
     </div>
   </Layout>
   )

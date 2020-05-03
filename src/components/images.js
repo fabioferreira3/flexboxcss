@@ -91,7 +91,6 @@ const Images = (props) => {
   `)
 
   const renderImages = () => {
-    console.log('rend')
     const images = [];
     for (const x of Array(qtyImages).keys()) {
       const imageName = `image${x+1}`;
