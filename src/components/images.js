@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -13,64 +13,102 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Images = () => {
+const Images = (props) => {
+  const { qtyImages } = props;
   const data = useStaticQuery(graphql`
     query {
       image1: file(relativePath: { eq: "image1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       image2: file(relativePath: { eq: "image2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       image3: file(relativePath: { eq: "image3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       image4: file(relativePath: { eq: "image4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       image5: file(relativePath: { eq: "image5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
-      }
+      },
+      image6: file(relativePath: { eq: "image6.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      image7: file(relativePath: { eq: "image7.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      image8: file(relativePath: { eq: "image8.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      image9: file(relativePath: { eq: "image9.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      image10: file(relativePath: { eq: "image10.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
     }
   `)
 
-  return <>
-    <div className="item">
-      <Img fluid={data.image1.childImageSharp.fluid} style={{height: '100%'}} />
-    </div>
-    <div className="item">
-      <Img fluid={data.image2.childImageSharp.fluid} style={{height: '100%'}} />
-    </div>
-    <div className="item">
-      <Img fluid={data.image3.childImageSharp.fluid} style={{height: '100%'}} />
-    </div>
-    <div className="item">
-      <Img fluid={data.image4.childImageSharp.fluid} style={{height: '100%'}} />
-    </div>
-    <div className="item">
-      <Img fluid={data.image5.childImageSharp.fluid} style={{height: '100%'}} />
-    </div>
-  </>
+  const renderImages = () => {
+    console.log('rend')
+    const images = [];
+    for (const x of Array(qtyImages).keys()) {
+      const imageName = `image${x+1}`;
+      images.push(
+        <div className="item" key={x}>
+          <Img fluid={data[imageName].childImageSharp.fluid} style={{height: '100%'}} />
+        </div>
+      )
+    }
+    return images;
+  }
+
+  return useMemo(() => (
+    <>
+      {renderImages()}
+    </>
+  ), [qtyImages])
 }
 
 export default Images;

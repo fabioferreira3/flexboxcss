@@ -1,6 +1,6 @@
 .mainStuffWrapper {
     background: #efefef;
-    width: 100%;
+    width: 75%;
     height:100vh;
     padding: 35px;
 }
@@ -12,14 +12,25 @@
     overflow: auto;
 }
 
+.mainControlsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: green;
+    padding: 30px;
+}
+
+button.active {
+    background: yellow;
+    outline: 0;
+}
+
 .controlsWrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
-    background: green;
-    padding: 30px;
 }
 
 .control {
