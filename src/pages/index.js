@@ -16,7 +16,10 @@ const IndexPage = () => {
   const [classes, setClasses] = useState([
     'flexboxwrapper',
     classesDefs.FlexDirection.row.name,
-    classesDefs.AlignItems.flexStart.name
+    classesDefs.AlignItems.flexStart.name,
+    classesDefs.FlexWrap.nowrap.name,
+    classesDefs.JustifyContent.flexStart.name,
+    classesDefs.AlignContent.stretch.name
   ])
   const [qtyImages, setQtyImages] = useState(5);
 
@@ -56,8 +59,8 @@ const IndexPage = () => {
         </div>
       </div>
       <div className={'containerControlsWrapper'}>
-        <div>
-          <span>Qty of Images:</span>
+        <div className={'counter'}>
+          <span className={'qty'}>Images:</span>
           <CounterButtons imagesSet={qtyImages} callback={setQtyImages}/>
         </div>
         <div className="controlsWrapper">

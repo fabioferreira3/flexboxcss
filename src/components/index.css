@@ -19,7 +19,9 @@
     display: flex;
     overflow: auto;
     height: calc(100% - 55px);
-    border: 1px solid #bfbfbf;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #bfbfbf;
 }
 
 .containerControlsWrapper {
@@ -37,11 +39,28 @@
     border-radius: 3px;
     background: #e2e2e2;
     margin-right: 5px;
+    flex-grow: 2;
 }
 
 .containerControlsWrapper button.active {
     background: #03bf67;
     color: white;
+    font-weight: bold;
+}
+
+.containerControlsWrapper .counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 15px;
+}
+
+.containerControlsWrapper .counter .qty {
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 button {
