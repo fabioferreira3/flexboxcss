@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import classNames from 'classnames';
 
 export const CounterButtons = (props) => {
   const { imagesSet, callback } = props;
@@ -7,7 +8,7 @@ export const CounterButtons = (props) => {
     const buttons = [];
     for (let x = 1; x <= 10; x++) {
       buttons.push(
-        <button className={imagesSet === x ? 'active' : ''}
+        <button className={classNames('count', imagesSet === x ? 'active' : '')}
                 key={x} onClick={() => callback(x)}
         > {x}
         </button>);

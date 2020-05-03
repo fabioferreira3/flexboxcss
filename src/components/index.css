@@ -2,34 +2,49 @@
     background: #efefef;
     width: 75%;
     height:100vh;
-    padding: 35px;
+    padding: 0 15px 15px 15px;
+}
+
+.flexContainer {
+    height: calc(60vh - 20px);
+    overflow: auto;
+}
+
+.flexContainer h2 {
+    margin: 10px 0 10px 0;
+    height: 35px;
 }
 
 .flexboxwrapper {
     display: flex;
-    background: #4e99c4;
-    height: 35vh;
     overflow: auto;
+    height: calc(100% - 55px);
+    border: 1px solid #bfbfbf;
 }
 
 .containerControlsWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: green;
-    padding: 10px;
+    padding: 15px;
+    height: calc(40vh - 15px);
+    overflow: auto;
+    border: 1px solid #bfbfbf;
 }
 
-.itemsControlWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: pink;
-    padding: 10px;
+.containerControlsWrapper button.count {
+    padding: 0 10px 0 10px;
+    border-radius: 3px;
+    background: #e2e2e2;
+    margin-right: 5px;
 }
 
-button.active {
-    background: yellow;
+.containerControlsWrapper button.active {
+    background: #03bf67;
+    color: white;
+}
+
+button {
     outline: 0;
 }
 
@@ -39,6 +54,7 @@ button.active {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
+    padding: 15px;
 }
 
 .control {
@@ -52,17 +68,22 @@ button.active {
     margin-bottom: 10px;
 }
 
+.control button {
+    border-radius: 5px;
+}
+
 .control button.off {
-    background: red;
+    background: #e2e2e2;
 }
 
 .control button.on {
-    background: blue;
+    background: #bf2def;
+    color: white;
 }
 
 .item {
     width: 150px;
-    border: 1px solid #d8d8d8;
+    border: 1px solid #bfbfbf;
 }
 
 .flexdirectionrow {
