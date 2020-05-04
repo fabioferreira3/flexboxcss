@@ -1,8 +1,11 @@
-.mainStuffWrapper {
+.mainStuffWrapper, .secondaryStuffWrapper {
     background: #efefef;
     width: 75%;
-    height:100vh;
     padding: 0 15px 15px 15px;
+}
+
+.mainStuffWrapper {
+    height:100vh;
 }
 
 .flexContainer {
@@ -61,6 +64,15 @@
 .containerControlsWrapper .counter .qty {
     font-weight: bold;
     margin-right: 10px;
+}
+
+.flexexample {
+    display: flex;
+    align-items: center;
+}
+
+.exampleslist {
+    width: 50%;
 }
 
 button {

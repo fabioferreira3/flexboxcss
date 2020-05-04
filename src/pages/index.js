@@ -10,6 +10,7 @@ import { classesDefs } from "../helpers/classesNames"
 import { setNewClasses } from "../helpers/setNewClasses"
 import { FlexSetting } from "../components/FlexSetting"
 import { CounterButtons } from "../components/CounterButtons"
+import { Content } from "../components/Content"
 
 const IndexPage = () => {
 
@@ -106,6 +107,9 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
+    </div>
+    <div className={'secondaryStuffWrapper'}>
+      <Content/>
     </div>
   </Layout>
   )
