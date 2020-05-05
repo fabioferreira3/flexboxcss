@@ -15,75 +15,250 @@ import Img from "gatsby-image"
 
 const Images = (props) => {
   const { qtyImages } = props;
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     image1: file(relativePath: { eq: "image1.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         },
+  //       }
+  //     },
+  //     image2: file(relativePath: { eq: "image2.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //     image3: file(relativePath: { eq: "image3.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //     image4: file(relativePath: { eq: "image4.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //     image5: file(relativePath: { eq: "image5.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //     image6: file(relativePath: { eq: "image6.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //     image7: file(relativePath: { eq: "image7.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //     image8: file(relativePath: { eq: "image8.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //     image9: file(relativePath: { eq: "image9.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //     image10: file(relativePath: { eq: "image10.jpg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 300) {
+  //           ...GatsbyImageSharpFluid,
+  //           presentationWidth
+  //         }
+  //       }
+  //     },
+  //   }
+  // `)
+
   const data = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: { eq: "image1.jpg" }) {
+      image1m: file(relativePath: { eq: "image1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          },
+        }
+      },
+      image1d: file(relativePath: { eq: "image1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          },
+        }
+      },
+      image2m: file(relativePath: { eq: "image2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image2: file(relativePath: { eq: "image2.jpg" }) {
+      image2d: file(relativePath: { eq: "image2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image3: file(relativePath: { eq: "image3.jpg" }) {
+      image3m: file(relativePath: { eq: "image3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image4: file(relativePath: { eq: "image4.jpg" }) {
+      image3d: file(relativePath: { eq: "image3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image5: file(relativePath: { eq: "image5.jpg" }) {
+      image4m: file(relativePath: { eq: "image4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image6: file(relativePath: { eq: "image6.jpg" }) {
+      image4d: file(relativePath: { eq: "image4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image7: file(relativePath: { eq: "image7.jpg" }) {
+      image5m: file(relativePath: { eq: "image5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image8: file(relativePath: { eq: "image8.jpg" }) {
+      image5d: file(relativePath: { eq: "image5.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image9: file(relativePath: { eq: "image9.jpg" }) {
+      image6m: file(relativePath: { eq: "image6.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
-      image10: file(relativePath: { eq: "image10.jpg" }) {
+      image6d: file(relativePath: { eq: "image6.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          }
+        }
+      },
+      image7m: file(relativePath: { eq: "image7.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          }
+        }
+      },
+      image7d: file(relativePath: { eq: "image7.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          }
+        }
+      },
+      image8m: file(relativePath: { eq: "image8.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          }
+        }
+      },
+      image8d: file(relativePath: { eq: "image8.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          }
+        }
+      },
+      image9m: file(relativePath: { eq: "image9.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          }
+        }
+      },
+      image9d: file(relativePath: { eq: "image9.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          }
+        }
+      },
+      image10m: file(relativePath: { eq: "image10.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 150) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
+          }
+        }
+      },
+      image10d: file(relativePath: { eq: "image10.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid,
+            presentationWidth
           }
         }
       },
@@ -94,9 +269,16 @@ const Images = (props) => {
     const images = [];
     for (const x of Array(qtyImages).keys()) {
       const imageName = `image${x+1}`;
+      const sources = [
+        data[`${imageName}m`].childImageSharp.fluid,
+        {
+          ...data[`${imageName}d`].childImageSharp.fluid,
+          media: `(min-width: 768px)`,
+        },
+      ]
       images.push(
         <div className="item" key={x}>
-          <Img fluid={data[imageName].childImageSharp.fluid} style={{height: '100%'}} />
+          <Img fluid={sources} style={{height: '100%'}} />
         </div>
       )
     }
