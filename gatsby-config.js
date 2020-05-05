@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Flexbox CSS Tester`,
+    siteUrl: 'https://flexbox-css.site',
     description: `Test all Flexbox CSS features in a single place, desktop or mobile`,
     author: `@gatsbyjs`,
   },
@@ -36,6 +37,8 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-     `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sitemap`
   ],
 }
