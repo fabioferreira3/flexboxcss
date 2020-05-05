@@ -15,6 +15,9 @@ const Layout = ({ children }) => {
   return (
     <>
         <main>{children}</main>
+        <footer className={'footer'}>
+          {new Date().getFullYear()} © Copyright - by Fabio Ferreira <a href="https://twitter.com/fabioferreira_h" target="_blank">@fabioferreira_h</a>
+        </footer>
     </>
   )
 }
