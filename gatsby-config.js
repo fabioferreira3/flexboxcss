@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Flexbox CSS Tester`,
-    description: ``,
+    description: `Test all Flexbox CSS features in a single place, desktop or mobile`,
     author: `@gatsbyjs`,
   },
   plugins: [
