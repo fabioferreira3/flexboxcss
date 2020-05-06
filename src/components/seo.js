@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO() {
   const { site, image } = useStaticQuery(
     graphql`
       query {
@@ -33,15 +33,15 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const { description: metaDescription, title, author, siteUrl } = site.siteMetadata;
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: 'en',
       }}
-      title={site.siteMetadata.title}
-      titleTemplate={site.siteMetadata.title}
+      title={title}
+      titleTemplate={title}
       meta={[
         {
           name: `description`,
@@ -49,7 +49,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: site.siteMetadata.title,
+          content: title,
         },
         {
           property: `og:description`,
@@ -61,7 +61,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.siteUrl}${image.childImageSharp.fluid.src}`,
+          content: `${siteUrl}${image.childImageSharp.fluid.src}`,
         },
         {
           name: `twitter:card`,
@@ -69,11 +69,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: author,
         },
         {
           name: `twitter:title`,
-          content: site.siteMetadata.title,
+          content: title,
         },
         {
           name: `twitter:description`,
@@ -81,26 +81,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: `${site.siteMetadata.siteUrl}${image.childImageSharp.fluid.src}`,
+          content: `${siteUrl}${image.childImageSharp.fluid.src}`,
         },
-      ].concat(meta)}
+      ]}
     />
   )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-  image: null
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string,
 }
 
 export default SEO

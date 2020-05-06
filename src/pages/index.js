@@ -51,7 +51,7 @@ const IndexPage = () => {
 
   return (
   <Layout>
-    <SEO title="Home" />
+    <SEO/>
     <div className={'mainStuffWrapper'}>
       <div className="flexContainer">
         <h2>Flexbox CSS Tester</h2>
