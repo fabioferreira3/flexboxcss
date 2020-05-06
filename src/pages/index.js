@@ -17,10 +17,10 @@ const IndexPage = () => {
   const [classes, setClasses] = useState([
     'flexboxwrapper',
     classesDefs.FlexDirection.row.name,
-    classesDefs.AlignItems.flexStart.name,
-    classesDefs.FlexWrap.nowrap.name,
-    classesDefs.JustifyContent.flexStart.name,
-    classesDefs.AlignContent.stretch.name
+    classesDefs.AlignItems.stretch.name,
+    classesDefs.FlexWrap.wrap.name,
+    classesDefs.JustifyContent.center.name,
+    classesDefs.AlignContent.center.name
   ])
   const [qtyImages, setQtyImages] = useState(5);
 
@@ -105,6 +105,14 @@ const IndexPage = () => {
               currentClasses={classes}
             />
           </div>
+        </div>
+        <div className={'donateBox'}>
+          <form style={{margin: 0}} action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="YUQ4PDT5XTLAY" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_BR/i/scr/pixel.gif" width="1" height="1" />
+          </form>
         </div>
       </div>
     </div>

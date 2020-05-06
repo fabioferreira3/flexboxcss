@@ -1,15 +1,24 @@
+main {
+    background: #f7f7f7;
+}
 .mainStuffWrapper, .secondaryStuffWrapper {
     background: #efefef;
-    width: 75%;
+    width: 60%;
+    margin: 0 auto;
     padding: 0 15px 15px 15px;
+    border: 1px solid #e0dede;
 }
 
 .mainStuffWrapper {
     height:100vh;
 }
 
+.secondaryStuffWrapper {
+    padding-top: 15px;
+}
+
 .flexContainer {
-    height: calc(60vh - 20px);
+    height: calc(54vh - 20px);
     overflow: auto;
 }
 
@@ -24,7 +33,7 @@
     height: calc(100% - 55px);
     border-width: 1px 1px 0 1px;
     border-style: solid;
-    border-color: #bfbfbf;
+    border-color: #e0dede;
 }
 
 .containerControlsWrapper {
@@ -32,9 +41,9 @@
     flex-direction: column;
     align-items: center;
     padding: 15px;
-    height: calc(40vh - 15px);
+    height: calc(46vh - 15px);
     overflow: auto;
-    border: 1px solid #bfbfbf;
+    border: 1px solid #e0dede;
 }
 
 .containerControlsWrapper button.count {
@@ -57,7 +66,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    border-bottom: 1px solid #bfbfbf;
+    border-bottom: 1px solid #e0dede;
     padding-bottom: 15px;
 }
 
@@ -83,7 +92,7 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     padding: 15px;
 }
@@ -91,35 +100,14 @@ button {
 .control {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding: 10px
 }
 
-@media only screen and (max-width: 768px) {
-    .mainStuffWrapper, .secondaryStuffWrapper {
-        width: 100%;
-    }
-    .controlsWrapper {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .control {
-        width: 100%;
-    }
-    .control button {
-        height: 48px;
-    }
-    .containerControlsWrapper button.count {
-        width: 48px;
-        height: 48px;
-        flex-grow: 2;
-        margin-bottom: 5px;
-    }
-    .exampleslist {
-        width: 100%;
-    }
-    .flexexample {
-        flex-wrap: wrap;
-    }
+.donateBox {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .control h2 {
@@ -239,4 +227,46 @@ button {
 
 .aligncontentspacearound {
     align-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+    .mainStuffWrapper, .secondaryStuffWrapper {
+        width: 100%;
+    }
+    .controlsWrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .control {
+        width: 100%;
+    }
+    .control button {
+        height: 48px;
+    }
+    .containerControlsWrapper button.count {
+        width: 48px;
+        height: 48px;
+        flex-grow: 2;
+        margin-bottom: 5px;
+    }
+    .exampleslist {
+        width: 100%;
+    }
+    .flexexample {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mainStuffWrapper, .secondaryStuffWrapper {
+        width: 75%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .mainStuffWrapper, .secondaryStuffWrapper {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
