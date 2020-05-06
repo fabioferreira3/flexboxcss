@@ -79,6 +79,10 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          property: `twitter:image`,
+          content: `${site.siteMetadata.siteUrl}${image.childImageSharp.fluid.src}`,
+        },
       ].concat(meta)}
     />
   )
