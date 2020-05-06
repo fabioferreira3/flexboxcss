@@ -11,16 +11,24 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { site, image } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
+            siteUrl,
             title
             description
             author
           }
-        }
+        },
+        image: file(relativePath: { eq: "favicon.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 100) {
+              ...GatsbyImageSharpFluid,
+            },
+          }
+        },
       }
     `
   )
@@ -52,6 +60,10 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `${site.siteMetadata.siteUrl}${image.childImageSharp.fluid.src}`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -76,6 +88,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  image: null
 }
 
 SEO.propTypes = {
@@ -83,6 +96,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
 }
 
 export default SEO

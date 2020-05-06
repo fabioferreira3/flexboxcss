@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Flexbox CSS Tester`,
+    title: `Flexbox CSS Online Tester`,
     siteUrl: 'https://flexbox-css.site',
-    description: `Test all Flexbox CSS features in a single place, desktop or mobile`,
-    author: `@gatsbyjs`,
+    description: `Test all Flexbox CSS features in a single place, either desktop or mobile!`,
+    author: `@fabioferreira_h`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
