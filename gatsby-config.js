@@ -52,21 +52,15 @@ module.exports = {
         // Setting this parameter is also optional
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
-        exclude: [""],
+        exclude: [],
         // Delays sending pageview hits on route update (in milliseconds)
         pageTransitionDelay: 0,
-        // Enables Google Optimize using your container Id
-        optimizeId: "",
-        // Enables Google Optimize Experiment ID
-        experimentId: "",
-        // Set Variation ID. 0 for original 1,2,3....
-        variationId: "",
         // Defers execution of google analytics script after page load
         defer: false,
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "flexbox-css.site",
+        cookieDomain: "auto",
       },
     },
   ],
