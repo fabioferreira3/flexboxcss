@@ -84,7 +84,9 @@ function SEO() {
           content: `${siteUrl}${image.childImageSharp.fluid.src}`,
         },
       ]}
-    />
+    >
+      <script data-ad-client="ca-pub-1029012320481381" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </Helmet>
   )
 }
 
