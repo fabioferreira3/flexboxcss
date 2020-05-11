@@ -37,9 +37,6 @@ main {
 }
 
 .containerControlsWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 15px;
     height: calc(46vh - 15px);
     overflow: auto;
@@ -227,6 +224,20 @@ button {
 
 .aligncontentspacearound {
     align-content: space-around;
+}
+
+.mediaNet728 {
+    display: none;
+    width: 728px;
+    height: 90px;
+    margin: 0 auto;
+    background: blue;
+}
+
+.mediaNet970 {
+    width: 970px;
+    height: 90px;
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 768px) {

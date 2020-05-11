@@ -5,8 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import React, { useEffect } from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -34,6 +33,12 @@ function SEO() {
   )
 
   const { description: metaDescription, title, author, siteUrl } = site.siteMetadata;
+
+  useEffect(() => {
+    window._mNHandle = window._mNHandle || {};
+    window._mNHandle.queue = window._mNHandle.queue || [];
+    var medianet_versionId = "3121199";
+  })
 
   return (
     <Helmet
@@ -85,6 +90,7 @@ function SEO() {
         },
       ]}
     >
+      <script src="https://contextual.media.net/dmedianet.js?cid=8CU2FN4Z4" async="async"></script>
       <script data-ad-client="ca-pub-1029012320481381" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </Helmet>
   )

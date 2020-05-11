@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import classNames from 'classnames';
 
 import Layout from "../components/layout"
@@ -11,6 +11,21 @@ import { setNewClasses } from "../helpers/setNewClasses"
 import { FlexSetting } from "../components/FlexSetting"
 import { CounterButtons } from "../components/CounterButtons"
 import { Content } from "../components/Content"
+
+const MediaNet = (props) => {
+
+  useEffect(() => {
+    window._mNHandle.queue.push(function (){
+      window._mNDetails.loadTag("526282852", "970x90", "526282852");
+    });
+  }, [])
+
+  return (
+    <div className={'mediaNet970'}>
+      <div id="526282852"/>
+    </div>
+  )
+};
 
 const IndexPage = () => {
 
@@ -64,6 +79,8 @@ const IndexPage = () => {
           <span className={'qty'}>Images:</span>
           <CounterButtons imagesSet={qtyImages} callback={setQtyImages}/>
         </div>
+        <MediaNet/>
+        <div className={'mediaNet728'}></div>
         <div className="controlsWrapper">
           <div className="control">
             <FlexSetting
