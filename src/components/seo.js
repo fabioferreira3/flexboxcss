@@ -86,7 +86,8 @@ function SEO() {
       ]}
     >
       <meta name="propeller" content="8b3c09a6677360ff363ff3235a4af389"/>
-      <script data-ad-client="ca-pub-1029012320481381" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script src="https://propu.sh/pfe/current/tag.min.js?z=3289646" data-cfasync="false" async/>
+      <script data-ad-client="ca-pub-1029012320481381" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"/>
     </Helmet>
   )
 }
