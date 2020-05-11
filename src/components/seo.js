@@ -85,8 +85,6 @@ function SEO() {
         },
       ]}
     >
-      <meta name="propeller" content="8b3c09a6677360ff363ff3235a4af389"/>
-      <script type="text/javascript" src="//ofgogoatan.com/apu.php?zoneid=3289756" async data-cfasync="false"></script>
       <script data-ad-client="ca-pub-1029012320481381" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </Helmet>
   )
